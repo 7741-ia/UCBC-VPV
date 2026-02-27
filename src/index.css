@@ -141,7 +141,7 @@ nav a {
 
 .hero img {
   width: 100%;
-  height: clamp(220px, 36vw, 320px);
+  height: clamp(210px, 32vw, 290px);
   object-fit: cover;
   display: block;
 }
@@ -261,7 +261,7 @@ nav a {
 
 .about img {
   width: 100%;
-  height: 190px;
+  height: 180px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -279,6 +279,46 @@ nav a {
   gap: 0.8rem;
 }
 
+.post-tools {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-tools input,
+.post-tools select {
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  background: var(--surface-soft);
+  color: var(--text);
+}
+
+.album-grid {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.6rem;
+}
+
+.album-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.45rem;
+  background: var(--surface-soft);
+}
+
+.album-grid img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.4rem;
+}
+
 .post-card {
   border: 1px solid var(--border);
   border-radius: 13px;
@@ -288,7 +328,7 @@ nav a {
 
 .post-card img {
   width: 100%;
-  height: 130px;
+  height: 122px;
   object-fit: cover;
 }
 
@@ -319,6 +359,74 @@ nav a {
   color: #6f8090;
 }
 
+.public-actions {
+  margin-top: 0.55rem;
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  font-weight: 700;
+  background: #2f7bc1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.like-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  font-weight: 700;
+  background: #d1a72c;
+  color: #2e260c;
+  cursor: pointer;
+}
+
+.contact-grid {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+}
+
+.contact-card {
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.contact-label {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #607487;
+}
+
+.contact-value {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-whatsapp {
+  display: inline-block;
+  margin-top: 0.35rem;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  background: #21a357;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 :root[data-theme='dark'] .post-card time {
   color: #c8d7e4;
 }
@@ -327,6 +435,11 @@ nav a {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: 370px 1fr;
+  gap: 1rem;
+}
+
+.admin-right {
+  display: grid;
   gap: 1rem;
 }
 
@@ -370,9 +483,13 @@ nav a {
   cursor: pointer;
 }
 
+.cancel-btn {
+  background: #7c8792 !important;
+}
+
 .preview-image {
   width: 100%;
-  height: 120px;
+  height: 110px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -395,6 +512,97 @@ nav a {
   height: 66px;
   border-radius: 9px;
   object-fit: cover;
+}
+
+.album-upload-label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.album-upload-label input {
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 0.55rem;
+  font: inherit;
+  background: var(--surface-soft);
+  color: var(--text);
+}
+
+.admin-album-grid {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6rem;
+}
+
+.admin-album-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.45rem;
+  background: var(--surface-soft);
+}
+
+.admin-album-item img {
+  width: 100%;
+  height: 102px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+}
+
+.admin-album-item .delete-btn {
+  width: 100%;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.45rem;
+}
+
+.backup-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.import-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  font-weight: 700;
+  background: #2f7bc1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.import-btn input {
+  display: none;
+}
+
+.backup-message {
+  margin: 0.6rem 0 0;
+  font-weight: 700;
+}
+
+.admin-actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #2f7bc1;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #c73434;
+  color: #fff;
 }
 
 .auth-shell {
